@@ -92,8 +92,12 @@ section p {
 section div {
     color: var(--body-text);
     padding: 1rem;
+    text-align: left;
 }
 h3 {
+    display: flex;
+    justify-content: center;
+    width: 40%;
     border-bottom: 2px solid var(--header);
     margin: 1rem;
 }
@@ -101,6 +105,9 @@ section img {
     max-width: 10rem;
     float: right;
     padding: 1rem;
+}
+div div {
+    padding-top: 3rem;
 }
 div img {
     max-width: 10rem;
