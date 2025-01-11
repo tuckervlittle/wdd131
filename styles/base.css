@@ -1,0 +1,119 @@
+:root { 
+    --header: #085f63; 
+    --background: #49beb7; 
+    --text-color: #f1f1f1; 
+	--accent: #f5e1da; 
+}
+/* Fonts */
+
+.libre-baskerville-regular {
+    font-family: "Libre Baskerville", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+.libre-baskerville-bold {
+    font-family: "Libre Baskerville", serif;
+    font-weight: 700;
+    font-style: normal;
+}
+  
+.libre-baskerville-regular-italic {
+    font-family: "Libre Baskerville", serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
+/* Styles */
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: "Libre Baskerville", serif;
+    font-weight: 400;
+    font-style: normal;
+    background-color: var(--background);
+    display: grid;
+    height: 100vh;
+    grid-template: auto 1fr auto / auto 1fr auto;
+}
+header {
+    background-color: var(--header);
+    grid-column: 1 / 4;
+    display: grid;
+}
+h1 {
+    color: var(--text-color);
+    text-decoration: none;
+    text-align: center;
+    padding-top: 1rem; 
+    padding-bottom: 2rem;
+}
+header nav {
+    background-color: var(--accent);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+nav a {
+    font-family: "Libre Baskerville", serif;
+    font-weight: 700;
+    font-style: normal;
+    color: var(--header);
+    text-decoration: none;
+    margin: .75rem;
+}
+main {
+    grid-area: 2 / 1 / 3 / 4;
+
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 1rem;
+    padding: 1rem;
+}
+section {
+     border: 2px solid var(--header);
+     border-radius: 1rem;
+     text-align: center;
+}
+section h2 {
+    color: var(--text-color);
+    text-decoration: none;
+    background-color: var(--header);
+    border-top-left-radius: .6rem;
+    border-top-right-radius: .6rem;
+    padding: .5rem;
+}
+section div {
+    color: var(--text-color);
+    padding: 1rem;
+}
+h3 {
+    border-bottom: 2px solid var(--header);
+    margin: 1rem;
+}
+section img {
+    max-width: 10rem;
+    float: right;
+    padding: 1rem;
+}
+div img {
+    max-width: 10rem;
+    float: left;
+    padding: 1rem;
+}
+footer {
+    color: var(--text-color);
+    background-color: var(--header);
+    grid-column: 1 /4;
+}
+footer p {
+    padding: .5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer p:last-of-type {
+    color: yellow;
+}
