@@ -1,35 +1,32 @@
-
-
-
-
 <!DOCTYPE html>
 <html lang="en-US">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Tucker Little | Temple Album</title>
-        <meta name="description" content="Photo album of different temples">
-        <meta name="author" content="Tucker Little">
-        <link rel="stylesheet" href="styles/temples.css">
-        <link rel="stylesheet" href="styles/temples-large.css">
-        <script src="scripts/temples.js"></script>
-    </head>
-    <body>
-        <header>
-            <h1>Temple Album</h1>
-            <button id="menu"></button>
-            <nav>
-                <ul class="navigation">
-                    <li><a href="#" title="Home">Home</a></li>
-                    <li><a href="#" title="Old">Old</a></li>
-                    <li><a href="#" title="New">New</a></li>
-                    <li><a href="#" title="Large">Large</a></li>
-                    <li><a href="#" title="Small">Small</a></li>
-                </ul>
-            </nav>
-        </header>
-        <main>
-            <h2>Home</h2>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tucker Little | Temple Album</title>
+    <meta name="description" content="Photo album of different temples">
+    <meta name="author" content="Tucker Little">
+    <link rel="stylesheet" href="styles/temples.css">
+    <link rel="stylesheet" href="styles/temples-large.css">
+    <script defer src="scripts/temples.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>Temple Album</h1>
+        <a href="#" id="hambutton"></a>
+        <nav id="navigation">
+            <a href="#" title="Home">Home</a>
+            <a href="#" title="Old">Old</a>
+            <a href="#" title="New">New</a>
+            <a href="#" title="Large">Large</a>
+            <a href="#" title="Small">Small</a>
+        </nav>
+    </header>
+    <main>
+        <h2>Home</h2>
+        <div class="grid">
             <figure>
                 <img src="images/laie_temple_medium.webp" alt="Laie, Hawaii Temple">
                 <figcaption>Laie, Hawaii Temple</figcaption>
@@ -66,10 +63,12 @@
                 <img src="images/laie_temple_medium.webp" alt="Laie, Hawaii Temple">
                 <figcaption>Laie, Hawaii Temple</figcaption>
             </figure>
-        </main>
-        <footer>
-            <p>&copy; | <span id="currentyear"></span> | Tucker Little | Hawaii, USA</p>
-            <p>Last Modified: <span id="lastmodified"></span></p>
-        </footer>
-    </body>
+        </div>
+    </main>
+    <footer>
+        <p><span id="currentyear"></span> | Tucker Little | Hawaii, USA</p>
+        <p>Last Modified: <span class="smaller" id="lastmodified"></span></p>
+    </footer>
+</body>
+
 </html>

@@ -9,10 +9,10 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('lastmodified').textContent = lastModified.toLocaleString();
 });
 
-const hamButton = document.querySelector('#menu');
-const navigation = document.querySelector('.navigation');
+const hambutton = document.querySelector('#hambutton');
 
-hamButton.addEventListener('click', () => {
-	navigation.classList.toggle('open');
-	hamButton.classList.toggle('open');
+hambutton.addEventListener('click', () => {
+  document.querySelector('h1').classList.toggle('open');
+  document.querySelector('#navigation').classList.toggle('open');
+  hambutton.classList.toggle('open');
 });
