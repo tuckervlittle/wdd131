@@ -1,0 +1,52 @@
+:root {
+    --bookend-background: rgb(74, 4, 107);
+    --main-background: white;
+    --bookend-text: white;
+    --main-text: black;
+}
+
+/* Fonts */
+
+/* Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+h1 {
+    text-align: left;
+}
+h2 {
+    text-align: center;
+}
+#menu {
+    font-size: 1.5rem;
+    border: 0;
+    background: none;
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+}
+#menu::before {
+    content: "☰";
+}
+#menu.open::before {
+    content: "X";
+}
+.navigation {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    list-style: none;
+}
+.navigation a {
+    display: none;
+    text-align: center;
+    text-decoration: none;
+}
+.navigation a:hover {
+    background-color: aquamarine;
+}
+.open a {
+    display: block;
+}
