@@ -7,10 +7,9 @@
 /* Fonts */
 
 .overpass-regular {
-  font-family: "Overpass", serif;
-  font-optical-sizing: auto;
-  font-weight: 500;
-  font-style: normal;
+    font-family: "Overpass", serif;
+    font-weight: 500;
+    font-style: normal;
 }
 
 /* Styles */
@@ -19,76 +18,73 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-} 
-html, body {
+}
+
+html,
+body {
     font-family: "Overpass", serif;
-    font-optical-sizing: auto;
     font-weight: 500;
     font-style: normal;
 }
-header, footer {
+
+header,
+footer {
     color: var(--white);
     text-align: center;
     padding: 2rem;
     background-color: var(--green);
 }
+
 main {
     background-color: var(--white);
 }
+
 h1 {
     font-size: 2rem;
 }
+
 aside {
     background-color: var(--red);
     padding: 1rem;
-} 
+}
+
 img {
     width: 100%;
     height: auto;
-} 
+}
+
 h2 {
     padding: 1rem;
-} 
+}
+
 .apart {
     background-color: white;
-} 
+}
+
 .column {
     display: grid;
     grid-gap: .75rem;
     grid-template-columns: 1fr 1fr;
     padding: 1rem;
-} 
+}
+
 .label {
     font-weight: bold;
     font-size: .85rem;
     text-align: right;
-} 
+}
+
 .value {
     font-size: .9rem;
     text-align: left;
-} 
-.info, .weather {
+}
+
+.info,
+.weather {
     text-align: center;
-} 
-.weather svg {
+}
+
+.weather img {
     width: 100px;
     height: auto;
-}
-.cls-1 {
-    fill:#efcc00;
-}
-.cls-2 {
-    fill:none;
-    stroke:#efcc00;
-    stroke-linecap:round;
-    stroke-miterlimit:10;
-    stroke-width:3px;
-}
-.cls-3 {
-    fill:rgb(243, 243, 238);
-    stroke: rgba(192, 191, 191, 0.445);
-}
-.cls-4 {
-    fill:rgb(243, 243, 238);
-    stroke: rgba(192, 191, 191, 0.445);
 }
