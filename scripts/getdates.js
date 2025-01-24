@@ -1,10 +1,10 @@
-const currentYearSpan = document.getElementById("currentyear");
-if (currentYearSpan) {
-    currentYearSpan.textContent = new Date().getFullYear();
-}
+const year = document.getElementById('currentyear');
+const lastModified = document.getElementById('lastmodified');
 
-const lastModified = document.getElementById("lastmodified");
-if (lastModified) {
-    const lastModifiedDate = document.lastModified;
-    lastModified.textContent = `Last Modified: ${lastModifiedDate}`;
-}
+document.addEventListener('DOMContentLoaded', () => {
+    const year = new Date().getFullYear();
+    document.getElementById('currentyear').textContent = year;
+
+    const lastModified = new Date(document.lastModified);
+    document.getElementById('lastmodified').textContent = lastModified.toLocaleString();
+});

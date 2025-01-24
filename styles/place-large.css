@@ -1,0 +1,45 @@
+:root {
+    --green: green;
+    --red: red;
+    --white: white;
+}
+
+@media (min-width: 650px) {
+  
+    h1 {
+        font-size: 3rem;
+    }
+    main {
+        background-color: var(--red);
+        position: relative;
+    }  
+    .apart {
+        opacity: 0.9;
+    }  
+    .apart h2 {
+        background-color: var(--green);
+        color: white;
+        margin: 1rem -.5rem;
+        width: 90%;
+        text-align: left;
+    }  
+    .info {
+        position: absolute;
+        top: 2rem;
+        left: 1rem;
+    }  
+    .weather {
+        position: absolute;
+        bottom: 2rem;
+        right: 1rem;
+    }  
+    .weather h2::after {
+        content: "⛅";
+        position: absolute;
+        top: 1.5rem;
+        right: 2.5rem;
+    }  
+    #weather-icon {
+        display: none;
+    }
+}

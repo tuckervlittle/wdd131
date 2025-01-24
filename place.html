@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tucker Little | Peru page</title>
+        <meta name="description" content="Informative page giving basic facts and current weather for Peru">
+        <meta name="author" content="Tucker Little">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@100..900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="styles/place.css">
+        <link rel="stylesheet" href="styles/place-large.css">
+        <script src="scripts/place.js" defer></script>
+    </head>
+    <body>
+        <header>
+            <h1>Peru</h1>
+        </header>
+        <aside>
+
+        </aside>
+        <main>
+            <picture>
+                <source srcset="images/peru-large.webp" media="(min-width: 1000px)">
+                <source srcset="images/peru-medium.webp" media="(min-width: 500px)">
+                <img src="images/peru-small.webp" alt="Machu Pichu">
+            </picture>
+            <section class="apart info">
+                <h2>Data</h2>
+                <div class="column">
+                    <span class="label">Area</span><span class="value">1,285,216 km2</span>
+                    <span class="label">Population</span><span class="value">34,217,848</span>
+                    <span class="label">Capital</span><span class="value">Lima</span>
+                    <span class="label">Language</span><span class="value">Spanish</span>
+                    <span class="label">Currency</span><span class="value">Peruvian Sol</span>
+                    <span class="label">Time Zone</span><span class="value">GMT-5</span>
+                    <span class="label">Calling Code</span><span class="value">+51</span>
+                    <span class="label">Internet TLD</span><span class="value">.pe</span>
+                </div>
+            </section>
+            <section class="apart weather">
+                <h2>Weather</h2>
+                <svg id="weather-icon" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <title>Weather</title>
+                    <circle class="cls-1" cx="39.8" cy="28" r="12.59"/>
+                        <line class="cls-2" x1="39.8" x2="39.8" y1="8" y2="12.44"/>
+                        <line class="cls-2" x1="39.8" x2="39.8" y1="43.56" y2="48"/>
+                        <line class="cls-2" x1="19.8" x2="24.25" y1="28" y2="28"/>
+                        <line class="cls-2" x1="55.36" x2="59.8" y1="28" y2="28"/>
+                        <line class="cls-2" x1="25.66" x2="28.8" y1="13.86" y2="17"/>
+                        <line class="cls-2" x1="50.8" x2="53.94" y1="39" y2="42.14"/>
+                        <line class="cls-2" x1="25.66" x2="28.8" y1="42.14" y2="39"/>
+                        <line class="cls-2" x1="50.8" x2="53.94" y1="17" y2="13.86"/>
+                        <path class="cls-3" d="M23.5,21.9A17.49,17.49,0,0,1,39,31.22a13.75,13.75,0,1,1,6.92,25.62L23.5,56.9a17.5,17.5,0,0,1,0-35Z"/>
+                        <circle class="cls-4" cx="45.89" cy="43.09" r="13.75" transform="translate(-7.96 75.69) rotate(-74.39)"/>
+                    </svg>
+                <div class="column">
+                    <span class="label">Temperature</span><span class="value" id="temperature"></span>
+                    <span class="label">Conditions</span><span class="value" id="condition"></span>
+                    <span class="label">Wind</span><span class="value" id="speed"></span>
+                    <span class="label">Wind Chill</span><span class="value" id="windChill"></span>
+                </div>
+            </section>
+        </main>
+        <aside></aside>
+        <footer>
+            <p>&copy;<span id="currentyear"></span> | Tucker Little | Hawaii, USA</p>
+            <p>Last Modified: <span class="smaller" id="lastmodified"></span></p>
+        </footer>
+    </body>
+</html>
