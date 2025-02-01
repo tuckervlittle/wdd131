@@ -99,72 +99,97 @@ const temples = [
       "https://churchofjesuschristtemples.org/assets/img/temples/kona-hawaii-temple/kona-hawaii-temple-47977-thumb.jpg"
   },
 ];
-const home = document.getElementById("home");
-const old = document.getElementById("old");
-const newLink = document.getElementById("new");
-const largeLink = document.getElementById("large");
-const smallLink = document.getElementById("small");
+
+// Create variables for the nav
+const homeNav = document.getElementById("home");
+const oldNav = document.getElementById("old");
+const newNav = document.getElementById("new");
+const largeNav = document.getElementById("large");
+const smallNav = document.getElementById("small");
 
 
 const container = document.querySelector(".grid");
 
-//Event Listeners
-home.addEventListener("click", () => {
+// Event Listeners calling and filtering the 
+// templeCard function and renaming the page title
+homeNav.addEventListener("click", () => {
   createTempleCard(temples);
-  document.getElementById("title").textContent = "Home"
+  document.getElementById("title").innerHTML = "Home";
 });
-
-old.addEventListener("click", () => {
+// Filters temples older than 1900
+// and renames the page title
+oldNav.addEventListener("click", () => {
   createTempleCard(temples.filter(temple => temple.dedicated < "1900"));
-  document.getElementById("title").textContent = "Old"
+  document.getElementById("title").innerHTML = "Old";
 });
-
-newLink.addEventListener("click", () => {
+// Filters temples newer than 2000
+// and renames the page title
+newNav.addEventListener("click", () => {
   createTempleCard(temples.filter(temple => temple.dedicated > "2000"));
+  document.getElementById("title").innerHTML = "New";
 });
-
-largeLink.addEventListener("click", () => {
+// Filters temples larger than 90,000 sq ft
+// and renames the page title
+largeNav.addEventListener("click", () => {
   createTempleCard(temples.filter(temple => temple.area > "90000"));
+  document.getElementById("title").innerHTML = "Large";
 });
-
-smallLink.addEventListener("click", () => {
+// Filters temples smaller than 10,000 sq ft
+// and renames the page title
+smallNav.addEventListener("click", () => {
   createTempleCard(temples.filter(temple => temple.area < "10000"));
+  document.getElementById("title").innerHTML = "Small";
 });
 
+// Call the templeCard function
 createTempleCard(temples);
 
-//Display Temples function
+// Function to build HTML content
 function createTempleCard(filteredTemples) {
+  // Resets the .grid container to empty
+  // Allows the filters to refill the page
   container.innerHTML = "";
+
+  // Loop through temple list and sort the information
   filteredTemples.forEach(temple => {
-    const card = document.createElement("div");
+    // Make a variable for each HTML element
+    const card = document.createElement("section");
+    const name = document.createElement("h3");
+    const location = document.createElement("p");
+    const dedication = document.createElement("p");
+    const size = document.createElement("p");
+    const image = document.createElement("img");
+
+    // Add class="card" to each section
     card.className = "card";
 
-    const image = document.createElement("img");
-    image.src = temple.imageUrl;
-    image.alt = temple.templeName;
-    image.setAttribute("loading", "lazy");
-    image.setAttribute("Alt", temple.templeName);
-    image.setAttribute("width", "600");
-    image.setAttribute("height", "400");
-
-    const name = document.createElement("h2");
+    // Add name, location, dedication date, size, 
+    // and the image information from the list
+    // to the HTML
     name.innerHTML = temple.templeName;
-
-    const location = document.createElement("p");
     location.innerHTML = `<span class="label">Location: </span>${temple.location}`;
+    dedication.innerHTML = `<span class="label">Dedicated: </span>${dedicationDate(temple)}`;
+    size.innerHTML = `<span class="label">Size: </span>${temple.area.toLocaleString('en-US')} sq ft`;
+    image.setAttribute("src", temple.imageUrl);
+    image.setAttribute("alt", `${temple.templeName} Temple`);
+    // Lazyload
+    image.setAttribute("loading", "lazy");
 
-    const dedication = document.createElement("p");
-    dedication.innerHTML = `<span class="label">Dedicated: </span>${temple.dedicated}`;
-
-    const area = document.createElement("p");
-    area.innerHTML = `<span class="label">Size: </span>${temple.area.toLocaleString('es-ES')} sq ft`;
-
+    // Put it all together
     card.appendChild(name);
     card.appendChild(location);
     card.appendChild(dedication);
-    card.appendChild(area);
+    card.appendChild(size);
     card.appendChild(image);
     container.appendChild(card);
+    
+    // Function to rewrite the date to a neater format
+    function dedicationDate(temple) {
+      const splitDate = temple.dedicated.split(", ");
+      const year = splitDate[0];
+      const month = splitDate[1];
+      const day = splitDate[2];
+      return `${month} ${day}, ${year}`
+    }
   });
 }
