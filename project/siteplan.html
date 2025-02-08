@@ -18,30 +18,38 @@
             <p>Informational page about the Melco EMT16X</p>
         </header>
         <main>
-            <div>
-                <h2>Site Purpose</h2>
-                <p>To give information about the capabilities, size limits, and usecases of the EMT16X.</p>
-            </div>
-            <div>
-                <h2>Scenarios</h2>
-                <p>What materials and items can the Melco EMT16X embroider on?</p>
-                <p>Is the Melco EMT16X right for my business?</p>
-                <p>How does the Melco EMT16X compare to other machines?</p>
-            </div>
-            <div>
-                <h2>Color Schema</h2>
-                <p>Red rgb(238,46,38) - Used for header text and buttons</p>
-                <p>White rgb(255,255,255) - Used for body text and header/footer backgrounds</p>
-                <p>Grey rgb(60,60,60) - Used for body backgrounds</p>
-            </div>
-            <div>
-                <h2>Typography</h2>
-                <p>Roboto regular - Header/footer</p>
-                <p>Overpass regular - Body</p>
-            </div>
+            <section>
+                <div>
+                    <h2>Site Purpose</h2>
+                    <p>To give information about the capabilities, size limits, and usecases of the EMT16X.</p>
+                </div>
+                <div>
+                    <h2>Scenarios</h2>
+                    <p>What materials and items can the Melco EMT16X embroider on?</p>
+                    <p>Is the Melco EMT16X right for my business?</p>
+                    <p>How does the Melco EMT16X compare to other machines?</p>
+                </div>
+                <div>
+                    <h2>Color Schema</h2>
+                    <p id="red">Red: rgb(238,46,38) - Used for header text and buttons</p>
+                    <p id="white">White: rgb(255,255,255) - Used for body text and header/footer backgrounds</p>
+                    <p id="grey">Grey: rgb(60,60,60) - Used for body backgrounds</p>
+                </div>
+                <div>
+                    <h2>Typography</h2>
+                    <p>Roboto regular - Header/footer</p>
+                    <p>Overpass regular - Body</p>
+                </div>
+                <div>
+                    <h2>Wireframe</h2>
+                    <img id="mobile" src="Images/wireframe_mobile.webp" alt="Mobile Wireframe">
+                    <img id="pc" src="Images/wireframe_pc.webp" alt="Mobile Wireframe">
+                </div>
+            </section>
         </main>
         <footer>
-            <p>&copy; | 2025 | Tucker Little | Hawaii, USA</p>
+            <p>&copy; | <span id="currentyear"></span> | Tucker Little | Hawaii, USA</p>
+            <p>Last Modified: <span id="lastmodified"></span></p>
         </footer>
         </body>
 </html>

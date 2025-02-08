@@ -1,7 +1,7 @@
 :root {
     --red: rgb(238,46,38); /*Used for header text and buttons*/
     --white: rgb(255,255,255); /*Used for body text and header/footer backgrounds*/
-    --grey: rgb(60,60,60); /*Used for body backgrounds*/
+    --grey: rgb(9, 9, 9); /*Used for body backgrounds*/
 }
 
 /* Fonts */
@@ -14,4 +14,74 @@
     font-family: "Roboto", serif;
     font-weight: 400;
     font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header, footer {
+    background-color: var(--grey);
+    color: var(--white);
+    text-align: center;
+    padding: 2rem;
+}
+
+section {
+    margin: 1rem auto;
+    max-width: 600px;
+}
+
+div {
+    padding: .5rem;
+    text-align: center;
+}
+
+div h2 {
+    color: var(--red);
+    background: var(--grey);
+    border-radius: 10px;
+    margin-bottom: .5rem;
+}
+
+div p {
+    margin-top: .25rem;
+    padding: .25rem;
+}
+
+#red {
+    color: var(--grey);
+    background: var(--red);
+    border: 1px solid var(--grey);
+    border-radius: 5rem;
+    margin-left: 15%;
+    width: 70%;
+}
+
+#white {
+    background: var(--white);
+    border: 1px solid var(--grey);
+    border-radius: 5rem;
+    margin-left: 10%;
+    width: 80%;
+}
+
+#grey {
+    color: var(--white);
+    background: var(--grey);
+    border-radius: 5rem;
+    margin-left: 15%;
+    width: 70%;
+}
+
+#mobile {
+    width: 50%;
+    max-width: 300px;
+}
+
+#pc {
+    width: 100%;
+    max-width: 600px;
 }
