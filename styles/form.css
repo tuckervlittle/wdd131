@@ -1,0 +1,115 @@
+:root {
+    --bookends: rgb(45,3,43);
+    --form: rgba(45, 3, 43, 0.164);
+    --bookend-text: rgb(255, 255, 255);
+    --border: rgba(0, 0, 0, 0.2);
+}
+
+/* Fonts */
+.roboto-regular {
+    font-family: "Roboto", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Styles */
+
+html, body {
+    font-family: "Roboto", serif;
+    font-weight: 550;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header, footer {
+    background-color: var(--bookends);
+    color: var(--bookend-text);
+    text-align: center;
+    padding: 1rem;
+}
+
+form {
+    background-color: var(--form);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    margin: 1rem auto;
+    padding: 1rem;
+    max-width: 600px;
+}
+
+.element {
+    margin-bottom: 1rem;
+}
+
+select,
+input[type="radio"], 
+input[type="date"],
+input[type="checkbox"],
+textarea,
+input[type="text"] {
+    display: block;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    margin-top: .25rem;
+    padding: .5rem;
+    width: 100%;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    width: 25px;
+    height: 25px;
+}
+
+input[type="submit"] {
+    margin-left: 5%;
+    padding: .5rem;
+    width: 90%;
+    font-size: large;
+    font-weight: 700;
+}
+
+textarea {
+    height: 5rem;
+}
+
+input:focus {
+    outline: 1px solid black;
+}
+
+.radio {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    justify-items: center;
+}
+
+.checkbox {
+    display: grid;
+    grid-template-columns: 40px 1fr;
+    justify-items: left;
+    align-items: center;
+    gap: .5rem;
+}
+
+.optional {
+    font-size: small;
+    color: rgb(49, 49, 223);
+}
+
+.review {
+    background-color: var(--form);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    margin: 1rem auto;
+    padding: 1rem;
+    max-width: 600px;
+}
+
+.review h2 {
+    padding-bottom: 1rem;
+}

@@ -1,0 +1,17 @@
+:root {
+    --red: rgb(238,46,38); /*Used for header text and buttons*/
+    --white: rgb(255,255,255); /*Used for body text and header/footer backgrounds*/
+    --grey: rgb(60,60,60); /*Used for body backgrounds*/
+}
+
+/* Fonts */
+.overpass-regular {
+    font-family: "Overpass", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.roboto-regular {
+    font-family: "Roboto", serif;
+    font-weight: 400;
+    font-style: normal;
+}
