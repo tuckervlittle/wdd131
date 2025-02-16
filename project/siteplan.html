@@ -1,55 +1,65 @@
 <!DOCTYPE html>
 <html lang="en-US">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Tucker Little | Site Plan - Melco EMT16X</title>
-        <meta name="description" content="Site Plan for an informational page about the Melco EMT16X">
-        <meta name="author" content="Tucker Little">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Overpass:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="styles/siteplan.css">
-        <script src="scripts/siteplan.js" defer></script>
-    </head>
-    <body>
-        <header>
-            <h1>Site Plan - Melco EMT16X</h1>
-            <p>Informational page about the Melco EMT16X</p>
-        </header>
-        <main>
-            <section>
-                <div>
-                    <h2>Site Purpose</h2>
-                    <p>To give information about the capabilities, size limits, and usecases of the EMT16X.</p>
-                </div>
-                <div>
-                    <h2>Scenarios</h2>
-                    <p>What materials and items can the Melco EMT16X embroider on?</p>
-                    <p>Is the Melco EMT16X right for my business?</p>
-                    <p>How does the Melco EMT16X compare to other machines?</p>
-                </div>
-                <div>
-                    <h2>Color Schema</h2>
-                    <p id="red">Red: rgb(238,46,38) - Used for header text and buttons</p>
-                    <p id="white">White: rgb(255,255,255) - Used for body text and header/footer backgrounds</p>
-                    <p id="grey">Grey: rgb(60,60,60) - Used for body backgrounds</p>
-                </div>
-                <div>
-                    <h2>Typography</h2>
-                    <p>Roboto regular - Header/footer</p>
-                    <p>Overpass regular - Body</p>
-                </div>
-                <div>
-                    <h2>Wireframe</h2>
-                    <img id="mobile" src="Images/wireframe_mobile.webp" alt="Mobile Wireframe">
-                    <img id="pc" src="Images/wireframe_pc.webp" alt="Mobile Wireframe">
-                </div>
-            </section>
-        </main>
-        <footer>
-            <p>&copy; | <span id="currentyear"></span> | Tucker Little | Hawaii, USA</p>
-            <p>Last Modified: <span id="lastmodified"></span></p>
-        </footer>
-        </body>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tucker Little | Site Plan - Melco EMT16X</title>
+    <meta name="description" content="Site Plan for an informational page about the Melco EMT16X">
+    <meta name="author" content="Tucker Little">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Overpass:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="scripts/project.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>Site Plan - Melco EMT16X</h1>
+        <a href="#" id="hambutton"></a>
+        <nav id="navigation">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="siteplan.html">Site Plan</a>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <div class="card">
+                <h2>Site Purpose</h2>
+                <p>To give information about the capabilities, size limits, and usecases of the EMT16X.</p>
+            </div>
+            <div class="card">
+                <h2>Scenarios</h2>
+                <p>What materials and items can the Melco EMT16X embroider on?</p>
+                <p>Is the Melco EMT16X right for my business?</p>
+                <p>How does the Melco EMT16X compare to other machines?</p>
+            </div>
+            <div class="card">
+                <h2>Color Schema</h2>
+                <p id="grey">Grey: rgb(60,60,60) - Used for header background</p>
+                <p id="white">White: rgb(255,255,255) - Used for body background and header text</p>
+                <p id="red">Red: rgb(238,46,38) - Used for hover backgrounds</p>
+            </div>
+            <div class="card">
+                <h2>Typography</h2>
+                <p>Roboto regular - Header/footer</p>
+                <p>Overpass regular - Body</p>
+            </div>
+            <div class="card">
+                <h2>Wireframe</h2>
+                <img id="mobile-img" src="Images/wireframe_mobile.webp" alt="Mobile Wireframe" loading="lazy">
+                <img id="pc-img" src="Images/wireframe_pc.webp" alt="Mobile Wireframe" loading="lazy">
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; | <span id="currentyear"></span> | Tucker Little | Hawaii, USA</p>
+        <p>Last Modified: <span id="lastmodified"></span></p>
+    </footer>
+</body>
+
 </html>
