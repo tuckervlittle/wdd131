@@ -100,12 +100,12 @@ document.addEventListener("click", function () {
   speedSpec.classList.add('value');
   const sewDims = document.createElement("span");
   sewDims.classList.add('label');
-  sewDims.innerHTML = `Flat Sewing Dimensions:`;
+  sewDims.innerHTML = `Flat Sew Dimensions:`;
   const sewDimsSpec = document.createElement("span");
   sewDimsSpec.classList.add('value');
   const capDims = document.createElement("span");
   capDims.classList.add('label');
-  capDims.innerHTML = `Cap Sewing Dimensions:`;
+  capDims.innerHTML = `Cap Sew Dimensions:`;
   const capDimsSpec = document.createElement("span");
   capDimsSpec.classList.add('value');
   const width = document.createElement("span");
